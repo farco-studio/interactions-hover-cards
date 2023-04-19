@@ -20,9 +20,9 @@ const splitText = () => {
     const itemMarquees = item.querySelectorAll(".marquee");
     const image = item.querySelector(".image");
     const itemTitle = item.querySelector(".title");
+    let marquee = gsap.utils.toArray(itemMarquees);
 
     item.addEventListener("mouseenter", () => {
-      marquee = gsap.utils.toArray(itemMarquees);
       textChars = item.querySelectorAll("span");
 
       clearTimeout(timeout);
