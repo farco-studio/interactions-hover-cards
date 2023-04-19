@@ -1,18 +1,18 @@
 :root {
-  --color-primary: #FFF;
+  --color-primary: #ddf3ff;
   --color-secondary: #323232;
-  --color-tertiary: #D7EBF5;
+  --color-tertiary: #d7ebf5;
   --bodycopy: 16px;
   --bodycopy-lh: 24px;
   --font-base: "Inter", sans-serif;
-  --font-display: 'Nanum Myeongjo', serif;
+  --font-display: "Nanum Myeongjo", serif;
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
-  min-height: 100vh;            /* fall-back */
+  min-height: 100vh; /* fall-back */
   min-height: -moz-available;
   min-height: -webkit-fill-available;
   min-height: fill-available;
@@ -72,7 +72,7 @@ body {
 }
 
 .header.is-first a {
- color: var(--color-tertiary);
+  color: var(--color-tertiary);
 }
 
 .cursor {
@@ -121,7 +121,7 @@ body {
 }
 
 .item {
-  position: relative;  
+  position: relative;
   height: calc(100vh - 106px);
   width: 50vw;
   border-top-left-radius: 80px;
@@ -147,7 +147,7 @@ body {
   bottom: 0;
   z-index: 2;
   border-top-left-radius: 80px;
-  border-top-right-radius: 80px;  
+  border-top-right-radius: 80px;
 }
 
 .image-container::before {
@@ -158,7 +158,7 @@ body {
   left: 0;
   right: 0;
   z-index: 4;
-  bottom: 0;  
+  bottom: 0;
   will-change: transform;
 }
 
@@ -193,7 +193,7 @@ body {
   transform-style: preserve-3d;
   margin: 0;
   white-space: nowrap;
-  display: flex;    
+  display: flex;
 }
 
 .marquee {
@@ -202,27 +202,18 @@ body {
   white-space: nowrap;
   margin: 0;
   padding-left: 0.1em;
-  padding-right: 0.1em; 
-  /* will-change: transform; */
+  padding-right: 0.1em;
 }
-
-/* .marquee {
-  animation-duration: 16s;
-  animation-name: scroll;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
-} */
 
 @keyframes scroll {
   0% {
-      transform: translateZ(0)
+    transform: translateZ(0);
   }
 
   to {
-      transform: translate3d(-100%,0,0)
+    transform: translate3d(-100%, 0, 0);
   }
 }
-
 
 .category {
   left: 64px;
@@ -246,4 +237,44 @@ body {
   bottom: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .item {
+    width: 100vw;
+    height: calc(50vh - 30px);
+    border-top-left-radius: 32px;
+    opacity: 1;
+    transform: translateY(0);
+    border-top-right-radius: 32px;
+  }
 
+  .item-2 {
+    margin-top: -30px;
+  }
+
+  .item-2 img {
+    object-position: 0 60%;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .item-list {
+    flex-direction: column;
+  }
+
+  .marquee-component {
+    display: none;
+  }
+
+  .category {
+    left: 16px;
+    top: 30px;
+  }
+
+  .description {
+    right: 16px;
+    top: 30px;
+  }
+}
