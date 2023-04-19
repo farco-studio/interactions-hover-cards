@@ -5,11 +5,11 @@ const hoverAnimation = (initialPosition, item) => {
     const itemMarquees = item.querySelectorAll(".marquee");
     const image = item.querySelector(".image");
     const itemTitle = item.querySelector(".title");
+    const marquee = gsap.utils.toArray(itemMarquees);
     let timeout = null;
 
     item.addEventListener("mouseenter", () => {
-      marquee = gsap.utils.toArray(itemMarquees);
-      textChars = item.querySelectorAll("span");
+      let textChars = item.querySelectorAll("span");
 
       clearTimeout(timeout);
 
