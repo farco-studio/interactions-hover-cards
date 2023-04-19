@@ -1,12 +1,22 @@
 import { gsap } from "gsap";
 import SplitTextJS from "split-text-js";
 
-const splitText = () => {
+const hoverCardAnimation = () => {
   const itemsTexts = document.querySelectorAll(".marquee span");
   const items = document.querySelectorAll(".item");
   const initialPosition = 260;
   let textChars = null;
   let timeout = null;
+
+  const introAnimation = () => {
+    gsap.to(items, {
+      duration: 1.5,
+      opacity: 1,
+      y: 0,
+      stagger: 0.2,
+      ease: "power4.out",
+    });
+  };
 
   const setSplitText = (item) => {
     const splitText = new SplitTextJS(item, {
@@ -113,6 +123,9 @@ const splitText = () => {
   gsap.set(".marquee span", {
     y: initialPosition,
   });
+
+  introAnimation();
+
 };
 
-export { splitText };
+export { hoverCardAnimation };

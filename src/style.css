@@ -117,6 +117,7 @@ body {
   color: var(--color-primary);
   justify-content: flex-end;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .item {
@@ -127,6 +128,9 @@ body {
   border-top-right-radius: 80px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+  transform: translateY(200px);
+  will-change: transform;
 }
 
 .item-2 {
@@ -142,6 +146,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: 2;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;  
 }
 
 .image-container::before {
@@ -154,6 +160,10 @@ body {
   z-index: 4;
   bottom: 0;  
   will-change: transform;
+}
+
+.item-2 .image-container {
+  border-top-left-radius: 0;
 }
 
 .category,
