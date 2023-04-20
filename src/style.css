@@ -217,7 +217,7 @@ body {
   bottom: 0;
 }
 
-@media (width <= 1024px) {
+@media screen and (max-width: 1024px) {
   .cursor {
     display: none;
   }
