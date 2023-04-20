@@ -6,7 +6,6 @@ const textCardAnimation = () => {
   const itemsTexts = document.querySelectorAll(".marquee span");
   const items = document.querySelectorAll(".item");
   const initialPosition = 260;
-  const cursor = document.querySelector(".cursor");
   
   const introAnimation = () => {
     gsap.to(items, {

@@ -5,7 +5,7 @@ const setSplitText = (item) => {
     type: "lines",
   });
 
-  textChars = splitText.chars;
+//   let textChars = splitText.chars;
 };
 
 export { setSplitText };
