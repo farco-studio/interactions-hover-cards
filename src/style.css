@@ -188,20 +188,6 @@ body {
   left: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  .title {
-    bottom: 0;
-    font-size: 48px;
-    line-height: 64px;
-    text-align: center;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto;
-    height: 30px;    
-  }
-}
-
 .marquee-component {
   position: absolute;
   z-index: 5;
@@ -256,7 +242,19 @@ body {
   bottom: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-device-width: 1024px) {
+  .title {
+    bottom: 0;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    height: 30px;    
+  }
+
   .item {
     width: 100vw;
     height: calc(50vh - 30px);
