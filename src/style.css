@@ -12,10 +12,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* fall-back */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
 }
 
 body {
@@ -199,16 +195,6 @@ body {
   padding-right: 0.1em;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateZ(0);
-  }
-
-  to {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
 .category {
   left: 64px;
   top: 40px;
@@ -231,8 +217,7 @@ body {
   bottom: 0;
 }
 
-
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .cursor {
     display: none;
   }
@@ -292,5 +277,15 @@ body {
   .description {
     right: 16px;
     top: 30px;
-  }  
+  }    
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
