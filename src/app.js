@@ -1,12 +1,12 @@
 import { cursorComponent } from "./cursor";
-import { hoverCardAnimation } from "./hoverCardAnimation";
+import { textCardAnimation } from "./textCardAnimation";
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 
 const init = () => {
   if (!isMobile) {
     cursorComponent();
-    hoverCardAnimation();
+    textCardAnimation();
   }
 }
 

@@ -102,6 +102,11 @@ body {
   .cursor {
     display: none;
   }
+
+  .header {
+    left: 16px;
+    right: 16px;
+  }
 }
 
 .item-list-container {
@@ -181,6 +186,20 @@ body {
   text-align: center;
   right: 0;
   left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    bottom: 0;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    height: 30px;    
+  }
 }
 
 .marquee-component {
