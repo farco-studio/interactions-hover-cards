@@ -24,7 +24,5 @@
     "gsap": "^3.11.5",
     "split-text-js": "^1.0.3"
   },
-  "browserslist": [
-    "last 2 Chrome versions"
-  ]
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
