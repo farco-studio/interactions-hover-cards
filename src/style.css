@@ -94,6 +94,10 @@ body {
   opacity: 0;
 }
 
+.cursor img {
+  transform: scale(0.8);
+}
+
 .item-list-container {
   display: flex;
   align-items: flex-end;
