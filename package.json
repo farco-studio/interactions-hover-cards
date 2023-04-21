@@ -23,5 +23,8 @@
   "dependencies": {
     "gsap": "^3.11.5",
     "split-text-js": "^1.0.3"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
