@@ -1,13 +1,22 @@
 import { cursorComponent } from "./cursor";
 import { textCardAnimation } from "./textCardAnimation";
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
+const isMobileViewport = () => window.matchMedia("(max-width: 768px)").matches;
+
+let isMobile = isMobileViewport();
+
+const handleResize = () => {
+  init();
+};
 
 const init = () => {
+  isMobile = isMobileViewport();
+
   if (!isMobile) {
     cursorComponent();
     textCardAnimation();
   }
 }
 
-init();
+window.addEventListener("load", () => init());
+window.addEventListener("resize", () => handleResize());
