@@ -2,6 +2,7 @@ import { cursorComponent } from "./cursor";
 import { textCardAnimation } from "./textCardAnimation";
 
 const isMobileViewport = () => window.matchMedia("(max-width: 768px)").matches;
+const delayTime = 600;
 
 let isMobile = isMobileViewport();
 
@@ -18,5 +19,10 @@ const init = () => {
   }
 }
 
-window.addEventListener("load", () => init());
+window.addEventListener("load", () => 
+  setTimeout(() => {
+    init();
+  }, delayTime)
+);
+
 window.addEventListener("resize", () => handleResize());
