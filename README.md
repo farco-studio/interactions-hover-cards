@@ -4,7 +4,7 @@
 # Interaction Hover Cards
 Hover effect with endless loop text animation
 
-[Demo](https://interactions-hover-cards.onrender.com/)
+[Demo](https://interactions-cards-hover.onrender.com/)
 
 
 ## Installation
